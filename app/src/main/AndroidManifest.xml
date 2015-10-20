@@ -17,6 +17,7 @@
         android:label="@string/app_name"
         android:name=".App"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -31,6 +32,18 @@
 
 
         <receiver
+            android:name="com.vihaan.testapilevel14.CustomPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.mirraw.android" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--<receiver
             android:name="com.localytics.android.PushReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
@@ -38,12 +51,13 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <category android:name="com.vihaan.testapilevel14" />
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
         <activity android:name="com.localytics.android.PushTrackingActivity"/>
 
 
-        <receiver android:name="com.localytics.android.ReferralReceiver" android:exported="true">
+        <receiver android:name="com.localytics.android.ReferralReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
