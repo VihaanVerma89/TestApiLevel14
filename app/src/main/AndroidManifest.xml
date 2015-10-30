@@ -31,19 +31,19 @@
         <meta-data android:name="LOCALYTICS_APP_KEY" android:value="7ecbe19129abd75c6190bc4-b26c20a2-765e-11e5-c2bb-0013a62af900"/>
 
 
-        <receiver
+        <!--<receiver
             android:name="com.vihaan.testapilevel14.CustomPushReceiver"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.mirraw.android" />
+                <category android:name="com.vihaan.testapilevel14" />
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
 
-        <!--<receiver
+        <receiver
             android:name="com.localytics.android.PushReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
@@ -51,7 +51,7 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <category android:name="com.vihaan.testapilevel14" />
             </intent-filter>
-        </receiver>-->
+        </receiver>
 
         <activity android:name="com.localytics.android.PushTrackingActivity"/>
 

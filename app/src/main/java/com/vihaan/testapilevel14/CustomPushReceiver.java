@@ -45,13 +45,13 @@ public class CustomPushReceiver extends BroadcastReceiver {
 
     private void startNotification(Context context, Intent intent) {
         try {
-            //if (intent.getExtras().getString("PushImageHandler") == null) {
+            if (intent.getExtras().getString("PushImageHandler") == null) {
             showNotification(context, intent);
-            /*} else {
+            } else {
                 long DB_rowID = -1;
                 SendNotification async = new SendNotification(context, intent, DB_rowID);
                 async.execute(intent.getExtras().getString("PushImageHandler"));
-            }*/
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
